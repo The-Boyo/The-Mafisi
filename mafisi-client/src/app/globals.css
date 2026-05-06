@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Style active navigation title */
+.activePathname {
+  font-size: 18px;
+  font-weight: bolder;
+  color: white;
+  opacity: 0.7;
+}
+
+/* header animation */
+.open-header {
+  animation: open-header 2s 1 linear;
+}
+
+@keyframes open-header {
+  0% {
+    height: 100px;
+  }
+
+  100% {
+    height: 100vh;
+  }
+}
