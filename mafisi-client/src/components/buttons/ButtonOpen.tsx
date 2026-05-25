@@ -6,13 +6,13 @@ export const ButtonOpen = ({
   setTheHeader: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <div
+    <button
       onClick={() => setTheHeader(true)}
-      className="w-4 h-4 flex flex-col justify-around cursor-pointer"
+      className="w-4 h-4 flex flex-col justify-around cursor-pointer sm:hidden"
     >
       <div className="h-0.5 w-full bg-black rounded-sm"></div>
       <div className="h-0.5 w-full bg-black rounded-sm"></div>
       <div className="h-0.5 w-full bg-black rounded-sm"></div>
-    </div>
+    </button>
   );
 };

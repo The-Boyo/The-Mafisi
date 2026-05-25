@@ -6,12 +6,12 @@ export const ButtonClose = ({
   setTheHeader: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <div
+    <button
       onClick={() => setTheHeader(false)}
-      className="w-4 h-4 flex flex-col space-y-2 justify-around cursor-pointer"
+      className="w-4 h-4 flex flex-col space-y-2 justify-around cursor-pointer sm:hidden"
     >
       <div className="h-0.5 w-full bg-black rounded-sm origin-left rotate-45"></div>
       <div className="h-0.5 w-full bg-black rounded-sm origin-left -rotate-45"></div>
-    </div>
+    </button>
   );
 };
