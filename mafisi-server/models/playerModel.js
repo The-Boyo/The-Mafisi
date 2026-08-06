@@ -13,8 +13,17 @@ const playerSchema = mongoose.Schema({
   },
   position: {
     type: String,
-    enum: ["Defender", "Midfielder", "Attacker"],
+    enum: ["Goalkeeper", "Defender", "Midfielder", "Attacker"],
     required: [true, "Player must have a position"],
+  },
+  preferredFoot: {
+    type: String,
+    enum: ["Right", "Left", "Both"],
+    required: [true, "Player must have a preferred foot."],
+  },
+  createdAt: {
+    type: Date,
+    default: new Date(Date.now()).toLocaleDateString(),
   },
 });
 
