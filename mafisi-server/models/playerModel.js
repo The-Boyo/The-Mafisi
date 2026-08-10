@@ -3,12 +3,16 @@ const mongoose = require("mongoose");
 const playerSchema = mongoose.Schema({
   firstname: {
     type: String,
-    required: true,
+    required: [true, "Player must have a first name"],
     maxLength: [45],
   },
   lastname: {
     type: String,
-    required: true,
+    required: [true, "Player must have a last name"],
+    maxLength: [45],
+  },
+  alias: {
+    type: String,
     maxLength: [45],
   },
   position: {
@@ -24,6 +28,16 @@ const playerSchema = mongoose.Schema({
   createdAt: {
     type: Date,
     default: new Date(Date.now()).toLocaleDateString(),
+  },
+  goals: {
+    type: Number,
+    required: [true, "Player must have number of goals"],
+    default: 0,
+  },
+  assists: {
+    type: Number,
+    required: [true, "Player must have number of assists"],
+    default: 0,
   },
 });
 
